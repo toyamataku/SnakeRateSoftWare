@@ -3,6 +3,8 @@
 This project employs [Cython](https://cython.org/) to compile part of its functionality into binary (`.pyd`) files for performance and code confidentiality.  
 **The uncompiled `.pyx` source code is not disclosed**, and only the resulting binaries are provided in this repository.
 
+---
+
 ## Overview
 
 This project provides the following features:
@@ -13,6 +15,8 @@ This project provides the following features:
 - **Circular Intersection Analysis**: `my_process_circle_intersections.cp312-win_amd64.pyd`  
 
 These files are compiled for **Python 3.12 on Windows 64-bit**.
+
+---
 
 ## How to Use
 
@@ -39,17 +43,21 @@ These files are compiled for **Python 3.12 on Windows 64-bit**.
      ```bash
      python main_script.py
      ```
-   - Make sure the compiled `.pyd` files (e.g. `my_process_image_livewire.cp312-win_amd64.pyd`) are in the same directory as `main_script.py`.
+   - Make sure the compiled `.pyd` files (e.g., `my_process_image_livewire.cp312-win_amd64.pyd`) are in the same directory as `main_script.py`.
 
 3. **Notes**  
    - This repository only provides **Windows 64-bit binaries** for **Python 3.12**.
    - Compatibility on other operating systems or Python versions is not guaranteed.
+
+---
 
 ## About Cython and Licensing
 
 - We utilize [Cython](https://cython.org/) to compile some modules for performance and to protect the uncompiled source.
 - Our custom `.pyx` code is **not published**, only the compiled `.pyd` binaries are included.
 - Refer to [Cython’s license](https://github.com/cython/cython/blob/main/LICENSE.txt) for details on Cython itself.
+
+---
 
 ## Dependencies / Requirements
 
@@ -65,11 +73,15 @@ These files are compiled for **Python 3.12 on Windows 64-bit**.
 
 These versions have been tested and are recommended.
 
+---
+
 ## License
 
-- The compiled binaries and script files in this repository follow the license specified within this project (e.g. MIT, BSD, etc.).
+- The compiled binaries and script files in this repository follow the license specified within this project (e.g., MIT, BSD, etc.).
 - Various open-source libraries (e.g., Cython, NumPy, etc.) are used under their respective licenses.
 - Check the `LICENSE` file and official websites for each third-party library for more details.
+
+---
 
 ## Disclaimer
 
@@ -94,7 +106,10 @@ These versions have been tested and are recommended.
 
 ### 3. Livewire Segmentation for Vascular Tracing
 - Continue clicking along the vessel to define its path.
-- Once you finish tracing, press the **q** key to confirm and exit the Livewire segmentation.
+- **Press `Z` (zoom)** to toggle the zoom level:
+  - Each press cycles **1.0× → 1.5× → 2.0× → back to 1.0×**, repeatedly.
+- **Press `r` (reverse)** to remove the most recently traced line if you need to correct a mistake.
+- **Press `q` (quit)** to finalize the tracing and exit Livewire segmentation.
 
 ### 4. Result Files
 - Upon pressing **q**, the software calculates the vessel’s “meandering” or tortuosity angles (bends), as well as intersections with any circles drawn.
